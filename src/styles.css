@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Montserrat Regular;
+  src: url(assets/fonts/Montserrat-VariableFont_wght.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat Bold;
+  src: url(assets/fonts/Montserrat-Bold.ttf) format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat Regular', 'arial', sans-serif;
+}
+
+html {
+  font-size: 12px;
+}
+
+.box-container {
+  margin: auto 5%;
+  padding-top: 10px;
+}
+
+.banner {
+  height: 50px;
+  background: #0E1318;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
