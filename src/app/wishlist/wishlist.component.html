@@ -1,0 +1,71 @@
+<div class="box-container container">
+  <div class="banner">Discover Latest Courses</div>
+  <div class="row">
+      <div class="col-md-9 course-height">
+          <div class="dashboard-filter">
+              <label>All Courses</label>
+              <select name="price" ngModel (ngModelChange)="priceChanged($event)">
+                  <option value="" disabled selected>Course Price</option>
+                  <option *ngFor="let price of priceList" [value]="price.id">
+                      {{ price.name }}
+                  </option>
+              </select>
+          </div>
+          <ng-container *ngFor="let course of courses">
+              <div class="course" (click)="addToCart(course)">
+                  <div class="course-img"></div>
+                  <div class="course-title">
+                      <div class="title">{{course.title}}</div>
+                      <div>
+                          <ng-container *ngFor="let tag of course.tags">
+                              <label class="tags">{{tag}}</label>
+                          </ng-container>
+                      </div>
+                  </div>
+                  <div class="author">{{course.author}}</div>
+                  <div class="price actual_price">Rs {{course.actual_price}}/-</div>
+                  <div class="price discount_price">{{(course.discounted_price) ?  'Rs ' + course.discounted_price + '\-' : '-'}}</div>
+                  <div class="add-cart">
+                      <input class="add-cart-btn" type="button" value="ADD TO CART" name="ADD TO CART"/>
+                  </div>
+              </div>
+          </ng-container>
+      </div>
+
+      <div class="col-md-3">
+          <div class="dashboard-search">
+              <input class="search-field" type ="text" [(ngModel)]="courseName"/>
+              <img src="../assets/images/search.svg" alt="Loading..." (click)="searchCourse(courseName)">
+          </div>
+          <div class="add-item">
+              <label class="cart-label">YOUR CART DETAILS</label>
+              <hr>
+
+              <div *ngIf="!cart.length; else notEmpty">
+                  <label class="empty-msg"><i>Your cart is empty right now. Please add courses in the cart from the list</i></label>
+                </div>
+
+                <ng-template #notEmpty>
+                  <div *ngFor="let cartDetail of cart" class="cart-item">
+                      <div class="cart-img"></div>
+                      <div class="w-100">
+                          <div class="cart-title">{{cartDetail.title}}</div>
+                          <div class="cart-price">Rs {{cartDetail.actual_price}}/-</div>
+                      </div>
+                  </div>
+                </ng-template>
+
+              <div class="price-pos">
+                  <hr>
+                  <div style="
+                  float: left;"> <div class="cart-value-label">Total Cart Value</div>
+                  <div class="price">Rs {{cartValue}}/-</div></div>
+                  <div>
+                    <span class="go-to-checkout" (click)="goToCart()">GO TO CHECKOUT</span>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
