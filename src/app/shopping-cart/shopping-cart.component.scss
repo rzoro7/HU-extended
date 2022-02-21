@@ -1,0 +1,250 @@
+.course {
+  display: flex;
+  box-shadow: 0px 2px 8px #f2f2f2;
+  width: 100%;
+  padding: 10px;
+  background: #FFFFFF;
+  margin: 10px 0px;
+  cursor: pointer;
+
+  .course-img {
+      background: #F2F2F2;
+      width: 50px;
+      height: 50px;
+      border-radius: 2px;
+  }
+
+  .course-title {
+      padding-left: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .title {
+          font-family: Montserrat Bold;
+          font-weight: bolder;
+          width: 100%;
+          margin-left: 10px;
+
+      }
+
+      .tags {
+          background: #E25B32;
+          border-radius: 4px;
+          padding: 1px 7px;
+          color: white;
+          margin-right: 5px;
+          font-size: 0.75em;
+      }
+  }
+
+  .author {
+    margin-left: 2px;
+      color: #939393;
+      font-size: 10px;
+      width: 9vw;
+  }
+
+  .price {
+      width: 7vw;
+      padding-left: 5px;
+      display: flex;
+      align-items: center;
+      font-size: 0.875em;
+
+      &.actual_price {
+          font-family: Montserrat Bold;
+          font-weight: bolder;
+      }
+
+      &.discount_price {
+          text-decoration: line-through;
+          color: #747474;
+          justify-content: center;
+      }
+  }
+
+  .add-cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 9vw;
+
+      .add-cart-btn {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 0.875em;
+          background: #FF6738;
+          border-radius: 4px;
+          height: 25px;
+          padding: 5px;
+      }
+  }
+}
+
+.dashboard-filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  label {
+      font-family: Montserrat Bold;
+  }
+}
+
+.dashboard-search {
+  padding: 8px 0px;
+  .search-field {
+      border: none;
+      background: #F0F2FF;
+      width: 90%;
+      height: 20px;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      padding: 5px;
+  }
+
+  img {
+      background: #FF6738;;;
+      padding: 4px;
+      height: 20px;
+      width: 20px;
+      border-radius: 3px;
+  }
+}
+
+.add-item {
+  height: calc(100vh - 200px);
+  margin-top: 10px;
+  box-shadow: 1px 1px 10px #f4f4f4;
+  position: relative;
+
+  .cart-label {
+      width: 100%;
+      text-align: center;
+      font-family: Montserrat Bold;
+      font-size: 0.875em;
+      padding-top: 10px;
+  }
+
+  .cart-value-label {
+      font-size: 0.75em;
+      padding-left: 5px;
+  }
+
+  .price {
+      font-family: Montserrat Bold;
+      font-size: 1.25em;
+      padding-left: 5px;
+  }
+
+  .price-pos {
+      position: absolute;
+      bottom: 9px;
+      width: 100%;
+  }
+}
+
+.course-height {
+  height: calc(100vh - 155px);
+  overflow: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ebe9e9;
+  .cart-img {
+      background: #F2F2F2;
+      width: 25px;
+      height: 20px;
+      border-radius: 2px;
+      margin: 0 10px;
+  }
+
+  .w-100 {
+      width: 100%;
+  }
+
+  .cart-title {
+      font-size: 0.875em;
+  }
+
+  .cart-price {
+      font-size: .875em;
+      font-family: Montserrat Bold;
+      text-align: end;
+  }
+}
+
+.empty-msg {
+  font-size: 10px;
+  color: #a99999;
+}
+
+.go-to-checkout{
+float: right;
+color: #ff6838;
+padding-right: 10px;
+padding-top: 10px;
+cursor: pointer;
+}
+
+
+.icon{
+  width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.count{
+  padding: 15px;
+  color: black;
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+
+.total-amt{
+  margin-top: 60px;
+    padding: 13px;
+    height: 150px;
+    box-shadow: 0 0 3px #ccc;
+    position: relative;
+}
+
+.total{
+  padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.discount{
+  color: green;
+}
+
+.checkout{
+  width: 100%;
+  background: orangered;
+  padding: 8px;
+  border: 0px;
+  margin-top: 22px;
+  border-radius: 4px;
+  color: white;
+}
+
+.title{
+  width: 70%;
+}
+.wishlist{
+  width: 10vw;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.875em;
+    color: #1ea2b9;
+    cursor: pointer;
+
+}

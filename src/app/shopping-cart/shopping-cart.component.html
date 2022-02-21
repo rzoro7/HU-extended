@@ -1,0 +1,35 @@
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 course-height">
+       <div class="count"> {{courses.length}} courses in Cart</div>
+    <ng-container *ngFor="let course of courses">
+      <div class="course">
+          <div class="course-img"></div>
+          <div class="title">
+            <div>{{course.title}}</div>
+
+            <label class="author">{{course.author}}</label>
+          </div>
+          <div class="wishlist" (click)="addToWishlist(course)">Move to Wishlist</div>
+          <div class="price actual_price">Rs {{course.actual_price}}/-</div>
+          <div class="price discount_price">{{(course.discounted_price) ?  'Rs ' + course.discounted_price + '\-' : '-'}}</div>
+          <div class="add-cart">
+            <img src="../assets/images/delete.png"  (click)="remove(course)" class="icon" alt="Loading...">
+
+          </div>
+      </div>
+    </ng-container>
+    </div>
+    <div class="col-md-3 total-amt">
+      <span>Total Amount</span>
+      <div class="total">{{cartPrice}}/-</div>
+      <span class="discount">You have saved Rs {{discountPrice}}/-</span>
+      <button class="checkout">CHECKOUT</button>
+    </div>
+    </div>
+
+  </div>
+
